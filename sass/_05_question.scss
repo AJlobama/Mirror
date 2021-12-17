@@ -1,0 +1,228 @@
+.question {
+  width: 100%;
+  height: 820px;
+  position: relative;
+  background-color: #282828;
+  z-index: 0;
+}
+
+.question::after {
+  content: '';
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 612px;
+  height: 172px;
+  background:url(../img/alma.svg) no-repeat;
+  z-index: -1;
+  @media (max-width: 650px) {
+    transform: translateX(-50%) scale(.7);
+  }
+  @media (max-width: 450px) {
+    transform: translateX(-50%) scale(.5);
+  }
+}
+
+.question__content {
+  margin: 0 auto;
+  padding-top: 240px;
+  padding-bottom: 120px;
+  max-width: 608px;
+  color: #fff;
+  @media (max-width: 700px) {
+    padding-top: 300px;
+  }
+  @media (max-width: 550px) {
+    padding-top: 215px;
+  }
+}
+
+.question__content-text {
+  position: relative;
+  h2 {
+    margin-bottom: 88px;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #886BD9;
+    @media (max-width: 700px) {
+      font-size: 28px;
+      line-height: 34px;
+      width: 100%;
+      margin-bottom: 48px;
+    }
+  }
+  p {
+    margin-bottom: 24px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    @media (max-width: 700px) {
+      font-size: 18px;
+      line-height: 28px;
+      width: 288px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.question__content-text::after {
+  content: '';
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  width: 2px;
+  height: 40px;
+  transform: translateX(-50%) translateY(-50%);
+  background: linear-gradient( top, rgba(168, 77, 220, 0), #BB6BD9 124.28%);
+  opacity: .9;
+  z-index: 20;
+  @media (max-width: 700px) {
+    top: 40%;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+// FORM
+
+#form {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  input {
+    padding-left: 16px;
+    width: 292px;
+    height: 40px;
+    background: rgba(40, 40, 40, 0.4);
+    border: 1px solid #4F4F4F;
+    box-sizing: border-box;
+    border-radius: 24px;
+    color: #fff;
+    outline: none;
+  }
+  textarea {
+    padding: 16px;
+    width: 100%;
+    height: 83px;
+    max-height: 130px;
+    min-height: 83px;
+    background: rgba(40, 40, 40, 0.4);
+    border: 1px solid #4F4F4F;
+    box-sizing: border-box;
+    border-radius: 24px;
+    color: #fff;
+    outline: none;
+    resize: none;
+    @media (max-width: 700px) {
+      width: 292px;
+      align-self: center;
+    }
+  }
+  button {
+    width: 292px;
+  }
+}
+
+.question .form-wrap {
+  width: 650px;
+  margin-bottom: 40px;
+  color: #fff;
+  @media (max-width: 700px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.input-wrap {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    @media (max-width: 700px) {
+      margin-bottom: 26px;
+    }
+  }
+  @media (max-width: 700px) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 26px;
+    margin-top: 24px;
+    margin-bottom: 0px;
+  }
+}
+
+#form .btn-form {
+  background: linear-gradient(91.36deg, #886BD9 -1.63%, #BB6BD9 124.28%);
+  box-shadow: 0px 8px 24px #282828;
+  border-radius: 48px;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: .3s;
+  position: relative;
+  z-index: 0;
+  color: #FFFFFF;
+}
+
+
+
+#form .btn-form::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 292px;
+  height: 40px;
+  // background: linear-gradient(91.36deg, #886BD9 -1.63%, #BB6BD9 124.28%);
+  // background: linear-gradient(91.91deg, #7450DC -1.61%, #B54DDC 123.13%);
+  background-color: red;
+  z-index: 20;
+}
+
+
+.input-name,
+.input-phone {
+  position: relative;
+  label {
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+    color: #828282;
+    background-color: #363232a4;
+    opacity: 0;
+    transition: .8s;
+  }
+}
+.input-name.active,
+.input-phone.active {
+  position: relative;
+  label {
+    opacity: 1;
+  }
+}

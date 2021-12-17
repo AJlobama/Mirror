@@ -1,0 +1,242 @@
+.main {
+  width: 100%;
+  height: 820px;
+  position: relative;
+  background-color: #282828;
+  @media (max-width: 900px) {
+    height: 100vh;
+  }
+}
+
+.main__inner {
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
+  height: 820px;
+  position: relative;
+  z-index: 0;
+}
+
+.main__inner:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../img/header-fon.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+}
+
+.main__inner::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    59.39deg,
+    #2a0b3d 41.84%,
+    rgba(136, 107, 217, 0.56) 95.41%
+  );
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.main__contant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 200px;
+  padding-bottom: 440px;
+  height: 100%;
+  @media (max-width: 450px) {
+    padding-top: 60px;
+    padding-bottom: 400px;
+    margin-bottom: auto;
+  }
+}
+
+.main__contatnt-title {
+  margin: 0 auto;
+  min-width: 786px;
+  width: 768px;
+  @media (max-width: 800px) {
+    width: 100%;
+    min-width: 100%;
+  }
+  @media (max-width: 450px) {
+    width: 100%;
+    min-width: 100%;
+    align-self: end;
+    margin-top: 48px;
+  }
+  p {
+    margin: 0 auto;
+    margin-bottom: 32px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: #ffffff;
+    @media (max-width: 800px) {
+      margin-bottom: 32px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+    @media (max-width: 600px) {
+      width: 288px;
+    }
+  }
+  h2 {
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    @media (max-width: 800px) {
+      font-size: 38px;
+      line-height: 44px;
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media (max-width: 600px) {
+      width: 310px;
+      font-size: 28px;
+      line-height: 34px;
+    }
+  }
+  span {
+    background-color: #fff;
+    color: #886bd9;
+    display: inline-block;
+  }
+}
+
+.main__decor-circle {
+  position: absolute;
+  bottom: 136px;
+  left: 30%;
+  @media (max-width: 1440px) {
+    left: 16%;
+    bottom: 200px;
+  }
+  @media (max-width: 1023px) {
+    left: 16%;
+    transform: scale(.8);
+  }
+
+  @media (max-width: 900px) {
+    left: 10%;
+    top: 420px;
+    bottom: auto;
+  }
+  @media (max-width: 680px) {
+    left: 20%;
+    bottom: auto;
+    top: 400px;
+  }
+
+  @media (max-width: 550px) {
+    left: 10%;
+    bottom: auto;
+    top: 400px;
+  }
+  @media (max-width: 450px) {
+    left: 10%;
+    bottom: auto;
+    top:300px;
+    transform: scale(.6);
+  }
+  @media (max-width: 400px) {
+    left: 8%;
+  }
+  @media (max-width: 350px) {
+    left: 2%;
+  }
+  @media (max-width: 320px) {
+    left: -4%;
+  }
+}
+
+.main__decor-circle::after {
+  width: 292px;
+  height: 2px;
+  content: "";
+  background: url(../img/decor-main-arrow-left.svg) no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 14.5%;
+  transform: translateY(-50%) translateX(-100%);
+  @media (max-width: 1440px) {
+    left: 67.5%;
+    background: url(../img/line-left.svg) no-repeat;
+  }
+}
+
+.main__decor-circle::before {
+  width: 2px;
+  height: 80px;
+  content: "";
+  background: url(../img/decor-main-arrow-top.svg) no-repeat;
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.main__decor-circle-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  cursor: pointer;
+}
+
+.main-decor-arrows {
+  position: relative;
+}
+
+.main-decor-arrows-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main__decor-text {
+  width: 595px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(56px);
+  font-size: 24px;
+  line-height: 32px;
+  // display: flex;
+  align-items: center;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  @media (max-width: 1440px) {
+    left: 52%;
+  }
+  @media (max-width: 680px) {
+    left: 52%;
+    width: 293.99px;
+  }
+  @media (max-width: 450px) {
+    // font-weight: 500;
+    // font-size: 16px;
+    width: 321px;
+  }
+  span {
+    @media (max-width: 450px) {
+      white-space: nowrap;
+    }
+  }
+}
